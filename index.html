@@ -133,20 +133,6 @@
       font-weight: 500;
       margin-bottom: 0.3em;
     }
-    .hero-banner {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 30px;
-      object-fit: cover;
-      margin-top: 1em;
-      margin-bottom: 1em;
-      box-shadow: 0 2px 22px rgba(72,77,54,0.08);
-      transition: box-shadow var(--transition), transform var(--transition);
-    }
-    .hero-banner:hover {
-      box-shadow: 0 6px 36px rgba(72,77,54,0.14);
-      transform: scale(1.017);
-    }
     /* Section Headings */
     h2 {
       font-family: var(--serif);
@@ -184,67 +170,44 @@
       gap: 2em;
       margin-top: 1.5em;
     }
-    .collection-group {
-      margin-bottom: 2em;
-    }
-    .collection-group-title {
-      font-family: var(--serif);
-      color: var(--olive);
-      font-size: 1.18em;
-      margin-bottom: 0.7em;
-      margin-top: 1.7em;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-    }
     .collection-card {
       border-radius: var(--radius);
       background: #fff;
-      padding: 1.3em 1em;
-      box-shadow: 0 2px 24px rgba(158, 121, 103, 0.08);
+      padding: 1.4em 1em;
+      box-shadow: 0 2px 24px rgba(72,77,54,0.07);
       text-align: center;
-      transition: box-shadow var(--transition), transform var(--transition);
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 350px;
-      justify-content: flex-start;
-    }
-    .collection-card:hover {
-      box-shadow: 0 4px 32px rgba(72, 77, 54, 0.11);
-      transform: translateY(-2px) scale(1.025);
     }
     .collection-img {
-      width: 100%;
+      width: 90%;
       max-width: 220px;
-      height: 300px;
-      object-fit: cover;
       border-radius: 18px;
       margin-bottom: 1em;
-      background: #ece6dd;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      transition: box-shadow var(--transition), transform var(--transition);
+      object-fit: cover;
+      aspect-ratio: 3/4;
       box-shadow: 0 2px 24px rgba(72, 77, 54, 0.06);
-    }
-    .collection-card:hover .collection-img {
-      box-shadow: 0 4px 24px rgba(72, 77, 54, 0.13);
-      transform: scale(1.05);
+      background: #ece6dd;
     }
     .collection-name {
-      font-family: var(--serif);
-      color: var(--olive);
-      font-size: 1.11em;
+      font-family: 'Playfair Display', serif;
+      color: #484d36;
+      font-size: 1.18em;
       font-weight: 600;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.2em;
     }
     .collection-desc {
       font-size: 1em;
-      color: var(--mocha);
-      margin-bottom: 0.4em;
+      color: #9e7967;
+      margin-bottom: 0.5em;
+      font-family: var(--body);
+    }
+    .collection-price {
+      color: #9e7967;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 0.2em;
       font-family: var(--body);
     }
     /* Contact */
@@ -314,7 +277,7 @@
     @media (max-width: 800px) {
       .container { max-width: 98vw; }
       section { padding: 1.2em 0.5em; }
-      .collections-list { gap: 1em; }
+      .collections-list { gap: 1em; grid-template-columns: 1fr 1fr;}
       .collection-img { height: 170px; }
     }
     @media (max-width: 520px) {
@@ -355,7 +318,6 @@
         <img src="logo.png" alt="Nhiên Atelier logo" class="hero-logo">
         <div class="hero-title">Nhiên Atelier</div>
         <div class="hero-slogan">Thời trang thủ công – Tinh tế & Gần gũi tự nhiên</div>
-        <img src="img9.jpg" alt="Hero Banner" class="hero-banner">
       </div>
     </section>
     <!-- Story Page -->
@@ -381,77 +343,73 @@
       </div>
     </section>
     <!-- Collections Page -->
- <section id="collections" class="page">
-  <h2>Bộ sưu tập Nhiên Xuân: Giao lĩnh Ánh Nguyệt</h2>
-  <div class="collections-intro" style="margin-bottom:1.8em;">
-    <i>
-      “Giao lĩnh Ánh Nguyệt” lấy cảm hứng từ vẻ đẹp giao hòa giữa cổ phục Việt và ánh trăng – biểu tượng của sự thuần khiết, tĩnh lặng và hoài niệm. <br>
-      BST tôn vinh vẻ đẹp nữ tính, thanh tao và nội tâm sâu lắng của người phụ nữ Á Đông.
-    </i>
-    <br><br>
-    <b>Bố cục BST:</b><br>
-    <ul style="margin:0.6em 0 0 1.2em;">
-      <li><b>Ánh trăng khởi nguyệt</b> – sắc trắng, lam nhạt, xám tro: tượng trưng cho sương sớm và vẻ thuần khiết nguyên sơ.</li>
-      <li><b>Nguyệt hạ tương giao</b> – sắc tím khói, ánh bạc, vàng champagne: giao thoa giữa người và trăng, giữa thực và mộng.</li>
-      <li><b>Tàn nguyệt hồi quang</b> – sắc vàng nhạt, ngọc trai, hồng phấn: ánh trăng cuối đêm, nhuốm chút hoài niệm và an yên.</li>
-    </ul>
-  </div>
-  <div class="collections-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2em;">
-    <!-- Card 1 -->
-    <div class="collection-card" style="background:#fff; border-radius:22px; box-shadow:0 2px 24px rgba(72,77,54,0.07); padding:1.4em 1em; text-align:center;">
-      <img class="collection-img" src="anh-trang-khoi-nguyet/mong-thuy-thanh.jpg" alt="Mộng Thuỷ Thanh" style="width:90%;max-width:220px;border-radius:18px;margin-bottom:1em;">
-      <div class="collection-name" style="font-family:'Playfair Display',serif;color:#484d36;font-size:1.18em;font-weight:600;">Mộng Thuỷ Thanh</div>
-      <div class="collection-desc" style="font-size:1em;color:#9e7967;margin-bottom:0.5em;">
-        Xanh lam khói sớm – Thanh khiết như sương mai, dịu dàng mà sâu lắng.
+    <section id="collections" class="page">
+      <h2>Bộ sưu tập Nhiên Xuân: Giao lĩnh Ánh Nguyệt</h2>
+      <div class="collections-intro" style="margin-bottom:1.8em;">
+        <i>
+          “Giao lĩnh Ánh Nguyệt” lấy cảm hứng từ vẻ đẹp giao hòa giữa cổ phục Việt và ánh trăng – biểu tượng của sự thuần khiết, tĩnh lặng và hoài niệm. <br>
+          BST tôn vinh vẻ đẹp nữ tính, thanh tao và nội tâm sâu lắng của người phụ nữ Á Đông.
+        </i>
+        <br><br>
+        <b>Bố cục BST:</b><br>
+        <ul style="margin:0.6em 0 0 1.2em;">
+          <li><b>Ánh trăng khởi nguyệt</b> – sắc trắng, lam nhạt, xám tro: tượng trưng cho sương sớm và vẻ thuần khiết nguyên sơ.</li>
+          <li><b>Nguyệt hạ tương giao</b> – sắc tím khói, ánh bạc, vàng champagne: giao thoa giữa người và trăng, giữa thực và mộng.</li>
+          <li><b>Tàn nguyệt hồi quang</b> – sắc vàng nhạt, ngọc trai, hồng phấn: ánh trăng cuối đêm, nhuốm chút hoài niệm và an yên.</li>
+        </ul>
       </div>
-      <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price" style="color:#9e7967;font-weight:700;text-decoration:none;">Liên hệ</a>
-    </div>
-    <!-- Card 2 -->
-    <div class="collection-card" style="background:#fff; border-radius:22px; box-shadow:0 2px 24px rgba(72,77,54,0.07); padding:1.4em 1em; text-align:center;">
-      <img class="collection-img" src="nguyet-ha-tuong-giao/hoang-sac-moc.jpg" alt="Hoàng Sắc Mộc" style="width:90%;max-width:220px;border-radius:18px;margin-bottom:1em;">
-      <div class="collection-name" style="font-family:'Playfair Display',serif;color:#484d36;font-size:1.18em;font-weight:600;">Hoàng Sắc Mộc</div>
-      <div class="collection-desc" style="font-size:1em;color:#9e7967;margin-bottom:0.5em;">
-        Vàng nhạt ấm áp – Màu của nắng non và sự sống, dịu dàng, tự nhiên, thuần khiết.
+      <div class="collections-list">
+        <!-- Card 1 -->
+        <div class="collection-card">
+          <img class="collection-img" src="anh-trang-khoi-nguyet/mong-thuy-thanh.jpg" alt="Mộng Thuỷ Thanh">
+          <div class="collection-name">Mộng Thuỷ Thanh</div>
+          <div class="collection-desc">
+            Xanh lam khói sớm – Thanh khiết như sương mai, dịu dàng mà sâu lắng.
+          </div>
+          <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price">Liên hệ</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="collection-card">
+          <img class="collection-img" src="nguyet-ha-tuong-giao/hoang-sac-moc.jpg" alt="Hoàng Sắc Mộc">
+          <div class="collection-name">Hoàng Sắc Mộc</div>
+          <div class="collection-desc">
+            Vàng nhạt ấm áp – Màu của nắng non và sự sống, dịu dàng, tự nhiên, thuần khiết.
+          </div>
+          <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price">Liên hệ</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="collection-card">
+          <img class="collection-img" src="nguyet-ha-tuong-giao/phu-van-tinh.jpg" alt="Phù Vân Tình">
+          <div class="collection-name">Phù Vân Tình</div>
+          <div class="collection-desc">
+            Hồng phấn nhẹ như mây – Như một đoá hoa chớm nở trong sớm mai, mong manh mà rực rỡ.
+          </div>
+          <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price">Liên hệ</a>
+        </div>
+        <!-- Card 4 -->
+        <div class="collection-card">
+          <img class="collection-img" src="nguyet-ha-tuong-giao/tich-luu-quang.jpg" alt="Tịch Lưu Quang">
+          <div class="collection-name">Tịch Lưu Quang</div>
+          <div class="collection-desc">
+            Xanh ngọc trong sương – Ánh sáng bình minh phản chiếu trên mặt nước, tĩnh tại và tinh khôi.
+          </div>
+          <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price">Liên hệ</a>
+        </div>
+        <!-- Card 5 -->
+        <div class="collection-card">
+          <img class="collection-img" src="tan-hoi-nguyet-quang/nguyet-quang-huyen.jpg" alt="Nguyệt Quang Huyền">
+          <div class="collection-name">Nguyệt Quang Huyền</div>
+          <div class="collection-desc">
+            Đỏ trầm cổ kính – Vẻ đẹp của đêm nguyệt ẩn, sâu sắc và quyền quý.
+          </div>
+          <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price">Liên hệ</a>
+        </div>
       </div>
-      <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price" style="color:#9e7967;font-weight:700;text-decoration:none;">Liên hệ</a>
-    </div>
-    <!-- Card 3 -->
-    <div class="collection-card" style="background:#fff; border-radius:22px; box-shadow:0 2px 24px rgba(72,77,54,0.07); padding:1.4em 1em; text-align:center;">
-      <img class="collection-img" src="nguyet-ha-tuong-giao/phu-van-tinh.jpg" alt="Phù Vân Tình" style="width:90%;max-width:220px;border-radius:18px;margin-bottom:1em;">
-      <div class="collection-name" style="font-family:'Playfair Display',serif;color:#484d36;font-size:1.18em;font-weight:600;">Phù Vân Tình</div>
-      <div class="collection-desc" style="font-size:1em;color:#9e7967;margin-bottom:0.5em;">
-        Hồng phấn nhẹ như mây – Như một đoá hoa chớm nở trong sớm mai, mong manh mà rực rỡ.
+      <div style="text-align:left; margin-top:1em;color:var(--mocha);font-size:1em;">
+        <a href="mailto:Nhien.Atelier.5582@gmail.com" style="color:#9e7967;">Liên hệ</a>
+        <br>
+        <span style="color:#9e7967;font-size:0.98em;">(Bộ sưu tập sẽ được cập nhật thêm!)</span>
       </div>
-      <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price" style="color:#9e7967;font-weight:700;text-decoration:none;">Liên hệ</a>
-    </div>
-    <!-- Card 4 -->
-    <div class="collection-card" style="background:#fff; border-radius:22px; box-shadow:0 2px 24px rgba(72,77,54,0.07); padding:1.4em 1em; text-align:center;">
-      <img class="collection-img" src="nguyet-ha-tuong-giao/tich-luu-quang.jpg" alt="Tịch Lưu Quang" style="width:90%;max-width:220px;border-radius:18px;margin-bottom:1em;">
-      <div class="collection-name" style="font-family:'Playfair Display',serif;color:#484d36;font-size:1.18em;font-weight:600;">Tịch Lưu Quang</div>
-      <div class="collection-desc" style="font-size:1em;color:#9e7967;margin-bottom:0.5em;">
-        Xanh ngọc trong sương – Ánh sáng bình minh phản chiếu trên mặt nước, tĩnh tại và tinh khôi.
-      </div>
-      <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price" style="color:#9e7967;font-weight:700;text-decoration:none;">Liên hệ</a>
-    </div>
-    <!-- Card 5 -->
-    <div class="collection-card" style="background:#fff; border-radius:22px; box-shadow:0 2px 24px rgba(72,77,54,0.07); padding:1.4em 1em; text-align:center;">
-      <img class="collection-img" src="tan-hoi-nguyet-quang/nguyet-quang-huyen.jpg" alt="Nguyệt Quang Huyền" style="width:90%;max-width:220px;border-radius:18px;margin-bottom:1em;">
-      <div class="collection-name" style="font-family:'Playfair Display',serif;color:#484d36;font-size:1.18em;font-weight:600;">Nguyệt Quang Huyền</div>
-      <div class="collection-desc" style="font-size:1em;color:#9e7967;margin-bottom:0.5em;">
-        Đỏ trầm cổ kính – Vẻ đẹp của đêm nguyệt ẩn, sâu sắc và quyền quý.
-      </div>
-      <a href="mailto:Nhien.Atelier.5582@gmail.com" class="collection-price" style="color:#9e7967;font-weight:700;text-decoration:none;">Liên hệ</a>
-    </div>
-  </div>
-  <div style="text-align:left; margin-top:1em;color:var(--mocha);font-size:1em;">
-    <a href="mailto:Nhien.Atelier.5582@gmail.com" style="color:#9e7967;">Liên hệ</a>
-    <br>
-    <span style="color:#9e7967;font-size:0.98em;">(Bộ sưu tập sẽ được cập nhật thêm!)</span>
-  </div>
-</section>
-  <div style="text-align:center; margin-top:1em;color:var(--mocha)">
-    (Bộ sưu tập sẽ được cập nhật thêm!)
-  </div>
     </section>
     <!-- Contact Page -->
     <section id="contact" class="page">
